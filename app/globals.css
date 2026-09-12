@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-display: var(--font-unbounded);
+  --font-subhead: var(--font-geologica);
+  --font-body: var(--font-onest);
+}
+
+@theme {
+  /* Нейтральная шкала */
+  --color-ink: #1a1a1a;
+  --color-coal: #212121;
+  --color-ash: #292929;
+  --color-line: #333333;
+  --color-fog: #a8a8a8;
+  --color-paper: #ffffff;
+
+  /* Акценты */
+  --color-peach: #ffbc66;
+  --color-lavender: #b3a7ff;
+
+  /* Анимация появления */
+  --animate-fade-up: fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(28px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Анимация бегущей строки */
+    --animate-marquee: marquee 28s linear infinite;
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-ink);
+    color: var(--color-paper);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: var(--color-peach);
+    color: var(--color-ink);
+  }
+}
