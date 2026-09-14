@@ -14,7 +14,7 @@ export default function Header() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-line/60 bg-ink/70 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 md:px-6">
         {/* Логотип */}
         <a href="#top" className="group flex items-center gap-2.5">
           <span className="size-2 rounded-full bg-peach transition-transform group-hover:scale-125" />
@@ -24,8 +24,8 @@ export default function Header() {
           </span>
         </a>
 
-        {/* Десктоп-навигация */}
-        <nav className="hidden items-center gap-8 md:flex">
+        {/* Десктоп-навигация — показываем только на больших экранах */}
+        <nav className="hidden items-center gap-6 lg:flex">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
@@ -37,18 +37,18 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Десктоп-кнопка */}
+        {/* Десктоп-кнопка — показываем только на больших экранах */}
         <a
           href="#apply"
-          className="hidden rounded-full bg-peach px-5 py-2 font-subhead text-sm font-semibold text-ink transition-colors hover:bg-paper md:inline-flex"
+          className="hidden rounded-full bg-peach px-5 py-2 font-subhead text-sm font-semibold text-ink transition-colors hover:bg-paper lg:inline-flex"
         >
           Оставить заявку
         </a>
 
-        {/* Мобильная кнопка-гамбургер */}
+        {/* Мобильная кнопка-гамбургер — показываем на md и ниже */}
         <button
           onClick={() => setOpen(!open)}
-          className="flex size-10 items-center justify-center rounded-lg border border-line bg-ash text-paper md:hidden"
+          className="flex size-10 items-center justify-center rounded-lg border border-line bg-ash text-paper lg:hidden"
           aria-label={open ? "Закрыть меню" : "Открыть меню"}
           aria-expanded={open}
         >
@@ -74,7 +74,7 @@ export default function Header() {
 
       {/* Мобильное меню — выезжает сверху */}
       <div
-        className={`overflow-hidden border-t border-line bg-ink transition-all duration-300 md:hidden ${
+        className={`overflow-hidden border-t border-line bg-ink transition-all duration-300 lg:hidden ${
           open ? "max-h-96" : "max-h-0"
         }`}
       >

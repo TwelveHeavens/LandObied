@@ -1,6 +1,6 @@
 const SOCIAL_LINKS = [
-  { name: "Telegram", href: "https://t.me/your_channel", icon: "TG" },
-  { name: "VK", href: "https://vk.com/your_group", icon: "VK" },
+  { name: "Telegram", href: "https://t.me/obedinenie_ru", icon: "TG" },
+  // { name: "VK", href: "https://vk.com/your_group", icon: "VK" },
   { name: "TikTok", href: "https://www.tiktok.com/@obedinenie_?_r=1&_t=ZS-99bDups3RgK", icon: "TT" },
 ];
 
@@ -19,8 +19,8 @@ export default function Footer() {
               </span>
             </div>
             <p className="font-body text-sm text-fog text-center md:text-left">
-              Закрытое сообщество подростков, где ты находишь своих, учишься у практиков
-              и создаёшь проекты, которыми будешь гордиться.
+              Закрытое сообщество подростков, где ты найдёшь единомышленников, будешь учиться у практиков
+              и создавать проекты, которыми захочешь гордиться.
             </p>
           </div>
 
